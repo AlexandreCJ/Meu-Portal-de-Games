@@ -1,0 +1,505 @@
+html{
+    height: 100%;
+}
+
+body, li, p{
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+div.logo > img{
+    width: 80px;
+    display: block;
+}
+
+
+/*CSS - HEADER - Início */
+.menu a{
+    color: white;
+}
+
+.header{
+    top: 0px;
+    background-color: rgb(170, 170, 170);
+}
+
+header.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.menu{
+    display: flex;
+}
+
+
+/* MENU MOBILE - Início */
+
+#menuToggle{
+    display: none;
+}
+.menuIcon{
+    display: none;
+}
+
+#navToggle{
+    display: none;
+}
+.navIcon{
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    main{
+        margin-top: 75px;
+    }
+    
+    
+    header.header{
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        z-index: 100;
+    }
+
+    div.nav{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+    /* Menu - Início */
+    .menu{
+        display: flex;
+        position: fixed;
+        flex-wrap: wrap;
+        align-content: center;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 0%;
+        background: rgba(0,0,0,0.7);
+        overflow: hidden;
+
+        transition: height 0.3s;
+        -webkit-transition: height 0.3s;
+        -moz-transition: height 0.3s;
+        -o-transition: height 0.3s;
+    }
+
+    .menu li{
+        display: block;
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+
+    .menu li a{
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .menuIcon{
+        display: block;
+        color: white;
+        width: 50px;
+        height: inherit;
+        position: absolute;
+        top: 15px;
+        right: 80px;
+        line-height: 60px;
+        z-index: 200;
+    }
+
+    .menuIcon i{
+        font-size: 2em;
+    }
+
+    #menuToggle:checked ~ label i:nth-child(2){
+        display: block;
+    }
+    #menuToggle:checked ~ label i:first-child{
+        display: none;
+    }
+    #menuToggle:not(:checked) ~ label i:nth-child(2){
+        display: none;
+    }
+    #menuToggle:not(:checked) ~ label i:first-child{
+        display: block;
+    }
+
+    #menuToggle:checked ~ ul{
+        height: 100%;
+    }
+    /* Menu - Fim */
+
+
+    /* Pesquisa - Início */
+
+    .pesquisa{
+        display: flex;
+        position: fixed;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        top: 0px;
+        left: 0px;
+        width: 0%;
+        height: 100%;
+        background: rgba(0,0,0,0.7);
+        overflow: hidden;
+
+        transition: width 0.3s;
+        -webkit-transition: width 0.3s;
+        -moz-transition: width 0.3s;
+        -o-transition: width 0.3s;
+    }
+
+    .navIcon{
+        display: block;
+        color: white;
+        width: 50px;
+        height: inherit;
+        position: absolute;
+        top: 18px;
+        right: 25px;
+        line-height: 60px;
+        z-index: 200;
+    }
+
+    .navIcon i{
+        font-size: 2em;
+    }
+
+    #navToggle:checked ~ label i:nth-child(2){
+        display: block;
+    }
+    #navToggle:checked ~ label i:first-child{
+        display: none;
+    }
+    #navToggle:not(checked) ~ label i:nth-child(2){
+        display: none;
+    }
+    #navToggle:not(checked) ~ label i:first-child{
+        display: block;
+    }
+
+    #navToggle:checked ~ form.pesquisa{
+        width: 100%;
+    }
+    
+    /* Pesquisa - Fim */
+}
+
+
+/* MENU MOBILE - Fim */
+
+
+
+.menu li{
+    list-style: none;
+    margin-left: 10px;
+}
+
+div.nav > nav{
+    margin-left: 20px;
+}
+
+.pesquisa{
+    display: flex;
+}
+
+header .navbar{
+    display: block;
+    padding-left: 10px;
+}
+
+/*CSS - HEADER - Fim */
+
+
+/*CSS - DESTAQUES - Início */
+section.main{
+    background-color: rgb(220, 220, 220);
+}
+
+section.destaques{
+    background-color: rgb(220, 220, 220);
+}
+
+.destaques{
+    padding-top: 20px;
+}
+
+.destaques h1{
+    text-align: center;
+}
+
+.text_carousel{
+    color: black;
+}
+
+
+h1{
+    color: black;
+}
+
+
+
+.img_carousel{
+    padding: 10px;
+    float: left;
+}
+
+
+.text_carousel{
+    padding: 10px;
+    float: right;
+}
+/*CSS - DESTAQUES - Fim */
+
+/*CSS - Lamçamentos - Início */
+.lancamentos_header{
+    padding-top: 20px;
+    display: flex;
+    max-width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+section.lancamentos_header > div.drop{
+    display: flex;
+}
+
+div.drop > div.dropdown{
+    margin-left: 10px;
+}
+
+div.dropdown > ul li{
+    list-style: none;
+}
+
+.lancamentos_cards{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin: 0 auto;
+    gap: 20px;
+    
+    padding-bottom: 50px;
+}
+
+.lancamentos_cards > div{
+    flex: 0 0 225px;
+    
+}
+
+.cards-jogo img{
+    max-width: 100%;
+    display: block;
+}
+/*CSS - Lamçamentos - Fim */
+
+
+/*CSS - PLATAFORMAAS - Início */
+
+section.plataformas > div.card-plataforma{
+    display: flex;
+    max-width: 80%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+section.plataformas > div.titulo{
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+
+.card-plataforma img{
+    max-width: 200px;
+    display: block;
+}
+/*CSS - PLATAFORMAAS - Fim */
+
+
+/*CSS - PUBLISHERS - Início */
+
+section.publishers{
+    margin-top: 30px;
+}
+
+section.publishers > div.titulo{
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+section.publishers > div.card-publisher{
+    display: flex;
+    max-width: 80%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+div.card-publisher > div{
+    flex: 0 0 200px;
+}
+
+div.card-publisher > div > p, li{
+    font-weight: bold;
+    color: black;
+    list-style:square;
+    
+}
+
+section.publishers{
+    background-color: rgb(220, 220, 220);
+}
+
+.card-publisher img{
+    max-width: 100%;
+    display: block;
+}
+/*CSS - PUBLISHERS - Fim */
+
+
+/*CSS - INFO - Início */
+
+section.info{
+    display: flex;
+    max-width: 80%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+section.info > div.sobre{
+    flex-shrink: 8;
+}
+
+section.info > div.editorial > a{
+    margin-right: 40px;
+}
+/*CSS - INFO - Fim */
+
+
+/*CSS - FOOTER - Início */
+.footer{
+    background-color: rgb(170, 170, 170);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    color: white;
+}
+
+/*CSS - FOOTER - Fim */
+
+/* Media Queries - Início */
+
+@media screen and (min-width:769px) and (max-width:992px)  {
+    div.img_carousel > iframe{
+        width: 100%;
+    }
+
+    .lancamentos_cards{
+        max-width: 100%;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    section.publishers > div.card-publisher{
+        justify-content: space-evenly;
+        gap: 8px;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:768px){
+    div.carousel-item > div.img_carousel{
+        display: none;
+    }
+
+    .lancamentos_cards{
+        max-width: 100%;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    section.plataformas > div.card-plataforma{
+        max-width: 100%;
+        justify-content: center;
+        gap: 20px;
+    }    
+
+    section.publishers > div.card-publisher{
+        max-width: 100%;
+        justify-content: center;
+        gap: 20px;
+    }
+
+}
+
+@media screen and (max-width:599px){
+    div.carousel-item > div.img_carousel{
+        display: none;
+    }
+
+    .lancamentos_header{
+        max-width: 100%;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .lancamentos_cards{
+        max-width: 100%;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 10px;
+    }
+
+    section.plataformas > div.card-plataforma{
+        max-width: 100%;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    section.publishers > div.card-publisher{
+        max-width: 100%;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    section.info{
+        display: block;
+    }
+
+    footer.footer > div.logo{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:465px){
+    section.lancamentos_header > div.drop, div.dropdown{
+        display: none;
+    }
+}
+
+
+/* Media Queries - Fim */
